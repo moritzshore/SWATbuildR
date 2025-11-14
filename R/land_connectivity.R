@@ -217,6 +217,8 @@ calculate_land_connectivity <- function(data_path) {
 
   finish_progress(length(id_iter), t0, 'Land objects')
 
+  connect_ids %>% readr::write_csv(paste0(data_path, "/og_connect_ids.csv"))
+
   cat('\nCleaning up land object connectivities...\n')
 
   i <- 1
