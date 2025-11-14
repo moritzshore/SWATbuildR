@@ -216,6 +216,9 @@ check_polygon_topology <- function(layer, data_path, label, n_feat = NULL,
 
   if(checks[2]) {
     cat('Analyzing', label, 'layer for specific number of features...\n')
+    if(n_feat %>% is.null()){
+      stop("Parameter 'n_feat' cannot be 'NULL'  for this check! (#2)")
+    }
     n_layer <- nrow(layer_bnd)
     has_wrongn <- n_feat != n_layer
 
