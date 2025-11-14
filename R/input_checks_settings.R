@@ -139,6 +139,16 @@ check_layer_attributes <- function(layer, type_to_lower) {
 #' features that caused issues in the respective checks.
 #' If at least one check identifies an issue, an error is triggered.
 #'
+#' Checks:
+#' 1. Check for intersection with basin boundary
+#' 2. Check for specific number of features
+#' 3. Check for MULTIPOLYGON features
+#' 4. Check for invalid features
+#' 5. Check for for very small feature areas
+#' 6. Check for features covered by other features
+#' 7. Check for overlapping features
+#' 8. Check for coverage of basin boundary
+#'
 #' @param layer Vector polygon layer
 #' @param data_path Path of the project data folder
 #' @param label Layer name to print in error message

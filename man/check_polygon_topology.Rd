@@ -49,3 +49,16 @@ Otherwise vector layers are written to the 'vct_path' containing the
 features that caused issues in the respective checks.
 If at least one check identifies an issue, an error is triggered.
 }
+\details{
+Checks:
+\enumerate{
+\item Check for intersection with basin boundary
+\item Check for specific number of features
+\item Check for MULTIPOLYGON features
+\item Check for invalid features
+\item Check for for very small feature areas
+\item Check for features covered by other features
+\item Check for overlapping features
+\item Check for coverage of basin boundary
+}
+}
