@@ -44,11 +44,10 @@ create_swatplus_database <- function(project_path, project_name){
   dbDisconnect(db)
 
   # write template SWAT+Editor data base to project path
-  file.copy("swatplus_init.sqlite",proj_path)
-  # file.copy(system.file("extdata/swatplus_init.sqlite", package = "SWATbuildR"),
-  #           db_path)
+  #file.copy("swatplus_init.sqlite",proj_path)
+  file.copy(system.file("extdata/swatplus_init.sqlite", package = "SWATbuildR"),
+            proj_path)
   db <- dbConnect(SQLite(), proj_path)
-  db1 <- dbConnect(SQLite(), "./swatplus_init.sqlite")
 
   # Write channels
   if(length(cha) == 4) {
@@ -64,13 +63,6 @@ create_swatplus_database <- function(project_path, project_name){
   walk2(hru, names(hru), ~ dbWriteTable(db, .y, .x, append = TRUE))
 
   # Write HRU properties
-  lum1 <- dbReadTable(db1, names(lum))
-  # creating list of DELETE queries with each id
-  delete_queries = paste0("DELETE FROM landuse_lum WHERE (id = '", 1:284, "');")
-
-  # executing each query
-  map(.x = delete_queries, .f = dbExecute, conn = db1)
-
   walk2(lum, names(lum), ~ dbWriteTable(db, .y, .x, append = TRUE))
   walk2(sol, names(sol), ~ dbWriteTable(db, .y, .x, append = TRUE))
 
