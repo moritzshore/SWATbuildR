@@ -79,6 +79,18 @@ prepare_terrain_land <- function(data_path) {
   flac_path <- paste0(data_path, '/raster/flac_dem_watr_burn.tif')
 
   wbt_d8_pointer(dem_watr_burn_path, fpnt_path)
+
+  wbt_fill_single_cell_pits(
+    dem = dem_watr_burn_path,
+    output = dem_watr_burn_path
+  )
+
+  wbt_breach_depressions_least_cost(
+    dem = dem_watr_burn_path,
+    output = dem_watr_burn_path,
+    dist = ceiling(20/dem_res)
+  )
+
   wbt_d8_flow_accumulation(dem_watr_burn_path, flac_path)
 }
 
