@@ -12,6 +12,8 @@
 #' @returns An SQLite data base file with the name '<project_name>.sqlite' that
 #'   can be further edited with the SWAT+Editor.
 #'
+#' @importFrom purrr walk2
+#'
 #' @export
 #'
 create_swatplus_database <- function(project_path, project_name){
