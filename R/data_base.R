@@ -13,6 +13,7 @@
 #'   can be further edited with the SWAT+Editor.
 #'
 #' @importFrom purrr walk2
+#' @importFrom DBI dbSendQuery dbClearResult dbDisconnect
 #'
 #' @export
 #'
