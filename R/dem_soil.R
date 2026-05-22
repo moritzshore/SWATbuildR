@@ -121,6 +121,7 @@ save_soil_raster <- function(soil, data_path) {
 aggregate_hru_dem_soil <- function(data_path) {
 
   ## Read raster layer
+  dem <- rast(paste0(data_path, "/raster/dem.tif"))
   slp  <- rast(paste0(data_path, '/raster/slope.tif'))
   soil <- rast(paste0(data_path, '/raster/soil.tif'))
 
