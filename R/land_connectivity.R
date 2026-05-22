@@ -13,10 +13,7 @@
 #' @importFrom dplyr mutate %>%
 #' @importFrom sf read_sf write_sf st_buffer
 #' @importFrom terra rast rasterize res vect writeRaster
-#' @importFrom whitebox wbt_breach_depressions_least_cost
-#'   wbt_d8_pointer wbt_d8_flow_accumulation
-#'   wbt_fill_depressions_wang_and_liu wbt_fill_single_cell_pits
-#'   wbt_reclass
+#' @importFrom whitebox wbt_breach_depressions_least_cost wbt_d8_pointer wbt_d8_flow_accumulation wbt_fill_depressions_wang_and_liu wbt_fill_single_cell_pits wbt_reclass
 #'
 #' @export
 #'

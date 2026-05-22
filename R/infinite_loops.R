@@ -16,8 +16,7 @@
 #'
 #' @importFrom crayon green red
 #' @importFrom DBI dbConnect dbDisconnect dbReadTable dbWriteTable
-#' @importFrom dplyr arrange bind_rows filter full_join group_by mutate select
-#'   starts_with summarize %>%
+#' @importFrom dplyr arrange bind_rows filter full_join group_by mutate select starts_with summarize %>%
 #' @importFrom lubridate now
 #' @importFrom purrr map_lgl map2_df pmap set_names
 #' @importFrom RSQLite SQLite
@@ -220,8 +219,7 @@ match_pair <- function(vct) {
 #' @returns The cleaned connections of the land objects.
 #'
 #' @importFrom DBI dbConnect dbDisconnect dbReadTable dbWriteTable
-#' @importFrom dplyr arrange bind_rows desc distinct filter group_by left_join
-#' mutate select ungroup %>%
+#' @importFrom dplyr arrange bind_rows desc distinct filter group_by left_join mutate select ungroup %>%
 #' @importFrom lubridate now
 #' @importFrom purrr map2
 #' @importFrom RSQLite SQLite

@@ -140,8 +140,7 @@ get_min_dist <- function(pnt, obj, typ) {
 #'
 #' @returns A list with the two tables recall_dat and recall_rec.
 #'
-#' @importFrom dplyr arrange bind_rows distinct_all group_by group_split
-#'   left_join mutate relocate select %>%
+#' @importFrom dplyr arrange bind_rows distinct_all group_by group_split left_join mutate relocate select %>%
 #' @importFrom purrr list_flatten map map2 map_chr map_int set_names
 #' @importFrom readr read_csv
 #' @importFrom stringr str_extract str_remove

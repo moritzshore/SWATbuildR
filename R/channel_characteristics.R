@@ -37,8 +37,7 @@ calc_wd <- function(contr_area) {
 #'
 #' @importFrom crayon green red
 #' @importFrom DBI dbConnect dbDisconnect dbReadTable
-#' @importFrom dplyr bind_rows filter group_by group_split left_join mutate
-#'   select summarize ungroup %>%
+#' @importFrom dplyr bind_rows filter group_by group_split left_join mutate select summarize ungroup %>%
 #' @importFrom purrr map map_df set_names
 #' @importFrom readr read_csv write_lines
 #' @importFrom RSQLite SQLite

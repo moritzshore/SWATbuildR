@@ -162,8 +162,7 @@ aggregate_hru_dem_soil <- function(data_path) {
 #'   - .$ids                provides the ID links between HRU ids and soil ids
 #'
 #' @importFrom DBI dbConnect dbDisconnect dbReadTable dbWriteTable
-#' @importFrom dplyr arrange bind_rows everything filter left_join mutate if_any
-#'   relocate select %>%
+#' @importFrom dplyr arrange bind_rows everything filter left_join mutate if_any relocate select %>%
 #' @importFrom purrr map map2 set_names
 #' @importFrom readr read_csv
 #' @importFrom RSQLite SQLite
