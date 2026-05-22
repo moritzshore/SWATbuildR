@@ -143,6 +143,9 @@ aggregate_hru_dem_soil <- function(data_path) {
                     soil  = soil[[2]]) %>%
     mutate(slope = ifelse(is.na(slope), 0.005, slope))
 
+  # bandaid fix! why extract(fun=mode) returning non-integer values?
+  hru_tbl %>% mutate(soil = soil %>% round(0)) -> hru_tbl
+
   db_path <- paste0(data_path, '/tables.sqlite')
   db <- dbConnect(SQLite(), db_path)
   dbWriteTable(db, 'hru_terrain_soil', hru_tbl, overwrite = TRUE)
