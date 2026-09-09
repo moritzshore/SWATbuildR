@@ -193,7 +193,7 @@ check_polygon_topology <- function(layer, data_path, label, n_feat = NULL,
     cat('Intersection of', label, 'layer with basin boundary layer...\n')
     bound <- read_sf(paste0(data_path, '/vector/basin.shp')) %>%
       select()
-    layer_bnd <- st_intersection(layer, bound) %>% suppressWarnings(.)
+    layer_bnd <- st_intersection(layer, bound) %>% sf::st_collection_extract() %>%  suppressWarnings(.)
     n_rmv <- nrow(layer) - nrow(layer_bnd)
     if (n_rmv == 0) {
       cat(green('  \U2714 '), 'Intersection completed.\n')
