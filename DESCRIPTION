@@ -1,7 +1,7 @@
 Package: SWATbuildR
 Type: Package
 Title: An object connectivity based SWAT+ model builder.
-Version: 1.0.0.9054
+Version: 1.0.0.9055
 Authors@R: person("Christoph", "Schuerz",
                 email = "c.schuerz@posteo.org",
                 role = c("aut", "cre"),
@@ -45,4 +45,4 @@ Suggests:
     testthat
 Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr
-Config/roxygen2/version: 8.0.0
+Config/roxygen2/version: 8.1.0
